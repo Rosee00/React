@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
+import IterationComponent from "./component/IterationComponent";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+
+    /*
+    p. 180
+    컴포넌트 반복하기
+    map( 콜백(item, index, arr) )
+    */
+
+    return (
+        <Fragment>
+            <IterationComponent/>
+        </Fragment>
+    )
+
 }
 
 export default App;
