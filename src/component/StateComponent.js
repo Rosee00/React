@@ -32,6 +32,7 @@ const StateComponent = () => {
     return (
         <>
             <h3 style={{'color': color}}>state값: {data}</h3>
+            
             <button onClick={func}>값변경하기</button>
             <button onClick={enter}>입장</button>
             <button onClick={exit}>퇴장</button>

@@ -5,15 +5,15 @@ import { useState } from "react";
 const EventComponent = () => {
 
     //name을 저정할 useState
-    const [name, setName] = useState('')
+    const [name, setName] = useState('');
 
     //이벤트 함수의 첫번째 매개변수에 이벤트에 대한 정보를 넣어줍니다.
     const handleName = (e) => {
-        //console.log(e.target.value);
-        setName(e.target.value); //state체인지
+        //console.log(e.target.value); //인풋에 입력한 데이터
+        setName(e.target.value); //state체인지 → 인풋에 입력한 값으로 state변경
     }
 
-    //
+    //topic을 저장할 useState
     const [topic, setTopic] = useState('');
     const handleTopic = (e) => {
         setTopic(e.target.value);
@@ -38,11 +38,11 @@ const EventComponent = () => {
     return (
         <>
             <h3>리액트의 이벤트 핸들링 (인풋데이터) </h3>
-            <input type="text" name="name" onChange={handleName} value={name} />
-            <div>체인지된결과: {name}</div>
+            <input type="text" name="name" onChange={handleName} value={name} />  {/* value={state값의 이름} 그냥 써줘라 에러 생길 수 있음  */}
+            <div>체인지된결과: {name} </div>  
 
             <input type="text" name="topic" onChange={handleTopic} onKeyUp={handlePress} value={topic} />
-            <div>체인지된결과: {topic}</div>
+            <div>체인지된결과: {topic}</div> {/* 하위 컴포넌트에서 props를 사용할 때, {}중괄호를 사용한다  */}
 
             <button type="button" onClick={handleClick}>클릭미</button>
         </>
