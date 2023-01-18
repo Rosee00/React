@@ -43,7 +43,7 @@ const IterationComponentQ2 = () => {
 
     // const [findData, setFindData] = useState('');
     const handleFind = ()=> {
-        let inputResult = data.filter( item=> item.type.toLowerCase().toUpperCase().includes(inputData.toLowerCase().toUpperCase()) || item.teacher.includes(inputData));
+        let inputResult = data.filter( item=> item.type.toLowerCase().includes(inputData.toLowerCase()) || item.teacher.includes(inputData));
         setList(inputResult);
         
     }
